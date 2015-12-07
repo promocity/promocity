@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Promocity | Заказать услугу</title>
+//= template/style-path.html
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+  <div class="body-wr  site-visit-details">
+  //= template/header.html
+  
+  <section>
+      <div class="content-wr">
+        <div class="about-company-wr">
+          <div class="order-form-img"></div>
+          <div class="about-head-wr">
+            <h1 class="about-head">Заказать услугу</h1>
+          </div>        
+        </div>        
+      </div>
+      
+      <form class="order-form  content-wr" id="order-form" action="javascript:OrderForm();completePageShow()" method="post">
+        <div class="form-order-caption-wr">
+          <p class="form-order-caption">Оставить заявку</p>          
+        </div>
+        <div class="left-block">
+          <label>Ф.И.О.:</label><input class="required" id="order-name" name="name" type="text">
+          <label>Контактный телефон:</label><input id="order-tel" class="calc-tel required" placeholder="+7 (...) ...-...." name="tel" type="text">
+          <label>Почта (если имеется)</label><input type="text" id="order-email">
+          <select id="order-service" class="service-type required" name="service">
+           <option value="valdef">Тип услуги:</option>
+           <option value="val1">Тип услуги 1:</option>
+           <option value="val2">Тип услуги 2:</option>
+           <option value="val3">Тип услуги 3:</option>
+           <option value="val4">Тип услуги 4:</option>
+          </select>
+          <select class="packet" id="order-packet">
+           <option value="packetdef">Пакет (если выбрали):</option>
+           <option value="packet1">Тип услуги 1:</option>
+           <option value="packet2">Тип услуги 2:</option>
+           <option value="packet3">Тип услуги 3:</option>
+           <option value="packet4">Тип услуги 4:</option>
+          </select>          
+        </div>
+        <div class="text-area-wr">
+          <label for="calc-form-textarea">Комментарии, предпочтения, предположения:</label>
+          <textarea id="order-comments"></textarea>
+          <p class="text-area-caption">Отправить заявку, менеджер обязательно свяжется с Вами </p>
+          <button class="text-area-btn" type="submit"></button>
+        </div>
+      </form>
+      <h2 class="order-form-contacts-head">Другие способы заказа</h2>
+      <div class="order-form-contacts-wr">
+        <div class="order-form-contacts  content-wr">
+          <div class="order-form-contacts-item">
+            <div class="order-form-contacts-img"></div>
+            <div class="contacts-text-block">
+              <h3 class="contacts-head">Звоните</h3>
+              <p class="order-form-contacts-tel">8 (922) 157 42 14</p>
+              <p class="order-form-contacts-tel">8 (922) 223 21 62</p>
+            </div>
+          </div>
+          <div class="order-form-contacts-item">
+            <div class="order-form-contacts-img"></div>
+            <div class="contacts-text-block">
+              <h3 class="contacts-head">Приходите</h3>
+              <p class="order-form-address">Ул. Чернышевского 16</p>
+              <p class="order-form-address">2 этаж, офис 220</p>
+              <p class="order-form-address">Часы работы:</p>
+              <p class="order-form-address">Пн - Пт, с 9:00 до 18:00</p>
+            </div>
+          </div>
+          <div class="order-form-contacts-item">
+            <div class="order-form-contacts-img"></div>
+            <div class="contacts-text-block">
+              <h3 class="contacts-head">Пишите</h3>
+              <a class="order-form-contact-mail" href="mailto:uf.promocity.ekb@yandex.ru">uf.promocity.ekb@yandex.ru</a>
+            </div>
+          </div>                            
+        </div>
+      </div>
+
+  </section>
+  
+  //= template/footer.html
+  <div style="display:none;" id="contacts_email">mng.promocity.ekb@yandex.ru</div>
+  <script src="js/main.js"></script>
+  </div>
+</body>
+</html>
